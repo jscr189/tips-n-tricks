@@ -14,6 +14,13 @@ public class PrimeSum {
 		System.out.println(primesum(12));
 
 	}
+	public static boolean isPrime(int n)
+	{
+		if(n==2) return true;
+		if(n<2||n%2==0) return false;
+	    for(int i = 3; i*i <= n; i+=2) if(n%i==0) return false;
+	    return true;
+	}
     public static ArrayList<Integer> primesum(int a) {
         int primes[]=new int[a+1];
         ArrayList<Integer> arr=new ArrayList<Integer>();
@@ -30,7 +37,7 @@ public class PrimeSum {
         }
         for(int i=2;i<=a;i++)
         {
-            if(primes[i]==1&&primes[a-i]==1)
+            if(isPrime(i)&&isPrime(a-i))
             {
                 arr.add(i);
                 arr.add(a-i);
