@@ -8,10 +8,10 @@ public class SieveOfEratosthenesForPrime {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(primesum(30));
+		System.out.println(primeslessthann(30));
 
 	}
-    public static ArrayList<Integer> primesum(int a) {
+    public static ArrayList<Integer> primeslessthann(int a) {
         int primes[]=new int[a+1];
         ArrayList<Integer> arr=new ArrayList<Integer>();
         primes[0]=0;primes[1]=0;
